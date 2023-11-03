@@ -1,627 +1,578 @@
 {
   "data": [
     {
-     "seat no.":"10",
-     "reserved":true,
-     "catogory":"male",
-     "price":500,
-     "name":"Arun",
-     "age":26,
-     "start":"Banglore",
-     "end":"Mysore",
-     "id":1
-
+      "seat": "10",
+      "reserved": true,
+      "catogory": "male",
+      "price": 500,
+      "name": "Arun",
+      "age": 26,
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 1
     },
     {
-      "seat no.":"11",
-      "reserved":true,
-      "catogory":"male",
-      "price":500,
-      "name":"Varun",
-      "age":26,
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":2
- 
-     },
-     {
-      "seat no.":"12",
-      "reserved":false,
-      "catogory":"femail",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":3
- 
-     },
-     {
-      "seat no.":"13",
-      "reserved":false,
-      "catogory":"femail",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":4
- 
-     },
-     {
-      "seat no.":"14",
-      "reserved":false,
-      "catogory":"femail",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":5
- 
-     },
-     {
-      "seat no.":"15",
-      "reserved":false,
-      "catogory":"femail",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":6
- 
-     },
-     {
-      "seat no.":"16",
-      "reserved":false,
-      "catogory":"femail",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":7
- 
-     },
-     {
-      "seat no.":"17",
-      "reserved":false,
-      "catogory":"femail",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":8
- 
-     },
-     {
-      "seat no.":"18",
-      "reserved":false,
-      "catogory":"femail",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":9
- 
-     },
-     {
-      "seat no.":"19",
-      "reserved":false,
-      "catogory":"femail",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":10
- 
-     },
-     {
-      "seat no.":"20",
-      "reserved":false,
-      "catogory":"femail",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":11
- 
-     },
-     {
-      "seat no.":"21",
-      "reserved":false,
-      "catogory":"femail",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":12
- 
-     },
-     {
-      "seat no.":"22",
-      "reserved":false,
-      "catogory":"femail",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":13
- 
-     },
-     {
-      "seat no.":"23",
-      "reserved":false,
-      "catogory":"femail",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":14
- 
-     },
-     {
-      "seat no.":"24",
-      "reserved":false,
-      "catogory":"femail",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":15
- 
-     },
-     {
-      "seat no.":"25",
-      "reserved":false,
-      "catogory":"male",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":16
- 
-     },
-     {
-      "seat no.":"26",
-      "reserved":false,
-      "catogory":"male",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":17
- 
-     },
-     {
-      "seat no.":"27",
-      "reserved":false,
-      "catogory":"male",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":18
- 
-     },
-     {
-      "seat no.":"28",
-      "reserved":false,
-      "catogory":"male",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":19
- 
-     },
-
-
-     {
-      "seat no.":"29",
-      "reserved":false,
-      "catogory":"male",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":20
- 
-     },
-
-
-     {
-      "seat no.":"30",
-      "reserved":false,
-      "catogory":"male",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":21
- 
-     },
-
-
-     {
-      "seat no.":"31",
-      "reserved":false,
-      "catogory":"male",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":22
- 
-     },
-
-
-     {
-      "seat no.":"32",
-      "reserved":false,
-      "catogory":"male",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":23
- 
-     },
-     {
-      "seat no.":"33",
-      "reserved":false,
-      "catogory":"male",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":24
- 
-     },
-     {
-      "seat no.":"34",
-      "reserved":false,
-      "catogory":"male",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":25
- 
-     },
-     {
-      "seat no.":"35",
-      "reserved":false,
-      "catogory":"male",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":26
- 
-     },
-     {
-      "seat no.":"36",
-      "reserved":false,
-      "catogory":"male",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":27
- 
-     },
-     {
-      "seat no.":"37",
-      "reserved":false,
-      "catogory":"male",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":28
- 
-     },
-     {
-      "seat no.":"38",
-      "reserved":false,
-      "catogory":"male",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":29
- 
-     },
-     {
-      "seat no.":"39",
-      "reserved":false,
-      "catogory":"male",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":30
- 
-     },
-     {
-      "seat no.":"40",
-      "reserved":false,
-      "catogory":"male",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":31
- 
-     },
-     {
-      "seat no.":"41",
-      "reserved":false,
-      "catogory":"male",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":31
- 
-     },
-     {
-      "seat no.":"42",
-      "reserved":false,
-      "catogory":"male",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":32
- 
-     },
-     {
-      "seat no.":"43",
-      "reserved":false,
-      "catogory":"male",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":33
- 
-     },
-     {
-      "seat no.":"44",
-      "reserved":false,
-      "catogory":"male",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":34
- 
-     },
-     {
-      "seat no.":"45",
-      "reserved":false,
-      "catogory":"male",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":35
- 
-     },
-     {
-      "seat no.":"46",
-      "reserved":false,
-      "catogory":"male",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":36
- 
-     },
-     {
-      "seat no.":"47",
-      "reserved":false,
-      "catogory":"male",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":37
- 
-     },
-     {
-      "seat no.":"48",
-      "reserved":false,
-      "catogory":"male",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":38
- 
-     },
-     {
-      "seat no.":"49",
-      "reserved":false,
-      "catogory":"male",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":39
- 
-     },
-     {
-      "seat no.":"50",
-      "reserved":false,
-      "catogory":"male",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":40
- 
-     },
-     {
-      "seat no.":"51",
-      "reserved":false,
-      "catogory":"male",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":41
- 
-     },
-     {
-      "seat no.":"52",
-      "reserved":false,
-      "catogory":"male",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":42
- 
-     },
-     {
-      "seat no.":"53",
-      "reserved":false,
-      "catogory":"male",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":43
- 
-     },
-     {
-      "seat no.":"54",
-      "reserved":false,
-      "catogory":"male",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":44
- 
-     },
-     {
-      "seat no.":"55",
-      "reserved":false,
-      "catogory":"male",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":45
- 
-     },
-     {
-      "seat no.":"56",
-      "reserved":false,
-      "catogory":"male",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":46
- 
-     },
-     {
-      "seat no.":"57",
-      "reserved":false,
-      "catogory":"male",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":47
- 
-     },
-     {
-      "seat no.":"58",
-      "reserved":false,
-      "catogory":"male",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":48
- 
-     },
-     {
-      "seat no.":"59",
-      "reserved":false,
-      "catogory":"male",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":49
- 
-     },
-     {
-      "seat no.":"60",
-      "reserved":false,
-      "catogory":"male",
-      "price":500,
-      "name":"NA",
-      "age":"NA",
-      "start":"Banglore",
-      "end":"Mysore",
-      "id":50
- 
-     }
-
-
-
+      "seat": "11",
+      "reserved": true,
+      "catogory": "male",
+      "price": 500,
+      "name": "Varun",
+      "age": 26,
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 2
+    },
+    {
+      "seat": "12",
+      "reserved": false,
+      "catogory": "femail",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 3
+    },
+    {
+      "seat": "13",
+      "reserved": false,
+      "catogory": "femail",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 4
+    },
+    {
+      "seat": "14",
+      "reserved": false,
+      "catogory": "femail",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 5
+    },
+    {
+      "seat": "15",
+      "reserved": false,
+      "catogory": "femail",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 6
+    },
+    {
+      "seat": "16",
+      "reserved": false,
+      "catogory": "femail",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 7
+    },
+    {
+      "seat": "17",
+      "reserved": false,
+      "catogory": "femail",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 8
+    },
+    {
+      "seat": "18",
+      "reserved": false,
+      "catogory": "femail",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 9
+    },
+    {
+      "seat": "19",
+      "reserved": false,
+      "catogory": "femail",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 10
+    },
+    {
+      "seat": "20",
+      "reserved": false,
+      "catogory": "femail",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 11
+    },
+    {
+      "seat": "21",
+      "reserved": false,
+      "catogory": "femail",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 12
+    },
+    {
+      "seat": "22",
+      "reserved": false,
+      "catogory": "femail",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 13
+    },
+    {
+      "seat": "23",
+      "reserved": false,
+      "catogory": "femail",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 14
+    },
+    {
+      "seat": "24",
+      "reserved": false,
+      "catogory": "femail",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 15
+    },
+    {
+      "seat": "25",
+      "reserved": false,
+      "catogory": "male",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 16
+    },
+    {
+      "seat": "26",
+      "reserved": false,
+      "catogory": "male",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 17
+    },
+    {
+      "seat": "27",
+      "reserved": false,
+      "catogory": "male",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 18
+    },
+    {
+      "seat": "28",
+      "reserved": false,
+      "catogory": "male",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 19
+    },
+    {
+      "seat": "29",
+      "reserved": false,
+      "catogory": "male",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 20
+    },
+    {
+      "seat": "30",
+      "reserved": false,
+      "catogory": "male",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 21
+    },
+    {
+      "seat": "31",
+      "reserved": false,
+      "catogory": "male",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 22
+    },
+    {
+      "seat": "32",
+      "reserved": false,
+      "catogory": "male",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 23
+    },
+    {
+      "seat": "33",
+      "reserved": false,
+      "catogory": "male",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 24
+    },
+    {
+      "seat": "34",
+      "reserved": false,
+      "catogory": "male",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 25
+    },
+    {
+      "seat": "35",
+      "reserved": false,
+      "catogory": "male",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 26
+    },
+    {
+      "seat": "36",
+      "reserved": false,
+      "catogory": "male",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 27
+    },
+    {
+      "seat": "37",
+      "reserved": false,
+      "catogory": "male",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 28
+    },
+    {
+      "seat": "38",
+      "reserved": false,
+      "catogory": "male",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 29
+    },
+    {
+      "seat": "39",
+      "reserved": false,
+      "catogory": "male",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 30
+    },
+    {
+      "seat": "40",
+      "reserved": false,
+      "catogory": "male",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 31
+    },
+    {
+      "seat": "41",
+      "reserved": false,
+      "catogory": "male",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 31
+    },
+    {
+      "seat": "42",
+      "reserved": false,
+      "catogory": "male",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 32
+    },
+    {
+      "seat": "43",
+      "reserved": false,
+      "catogory": "male",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 33
+    },
+    {
+      "seat": "44",
+      "reserved": false,
+      "catogory": "male",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 34
+    },
+    {
+      "seat": "45",
+      "reserved": false,
+      "catogory": "male",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 35
+    },
+    {
+      "seat": "46",
+      "reserved": false,
+      "catogory": "male",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 36
+    },
+    {
+      "seat": "47",
+      "reserved": false,
+      "catogory": "male",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 37
+    },
+    {
+      "seat": "48",
+      "reserved": false,
+      "catogory": "male",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 38
+    },
+    {
+      "seat": "49",
+      "reserved": false,
+      "catogory": "male",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 39
+    },
+    {
+      "seat": "50",
+      "reserved": false,
+      "catogory": "male",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 40
+    },
+    {
+      "seat": "51",
+      "reserved": false,
+      "catogory": "male",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 41
+    },
+    {
+      "seat": "52",
+      "reserved": false,
+      "catogory": "male",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 42
+    },
+    {
+      "seat": "53",
+      "reserved": false,
+      "catogory": "male",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 43
+    },
+    {
+      "seat": "54",
+      "reserved": false,
+      "catogory": "male",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 44
+    },
+    {
+      "seat": "55",
+      "reserved": false,
+      "catogory": "male",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 45
+    },
+    {
+      "seat": "56",
+      "reserved": false,
+      "catogory": "male",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 46
+    },
+    {
+      "seat": "57",
+      "reserved": false,
+      "catogory": "male",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 47
+    },
+    {
+      "seat": "58",
+      "reserved": false,
+      "catogory": "male",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 48
+    },
+    {
+      "seat": "59",
+      "reserved": false,
+      "catogory": "male",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 49
+    },
+    {
+      "seat": "60",
+      "reserved": false,
+      "catogory": "male",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 50
+    }
+  ],
+  "booking": [
+    {
+      "seat": "12",
+      "reserved": false,
+      "catogory": "femail",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 3
+    }
   ]
 }

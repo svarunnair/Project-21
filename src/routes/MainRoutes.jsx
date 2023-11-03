@@ -17,6 +17,7 @@ function MainRoutes() {
         <Route path='/home' element={token&&<Home/>}/>
         <Route path='/signup' element={<Signup/>}/>
         <Route path="/signin" element={<Signin/>}/>
+        <Route path="/booking" element={token&&<Booking/>}/>
 
 
 
