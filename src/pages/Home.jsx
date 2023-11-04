@@ -1,11 +1,14 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { getData, postBooking, postData } from '../redux/data/action'
-import { Button, Grid, InputRightAddon, flexbox } from '@chakra-ui/react'
+import { getData, patchBooking, postBooking, postData } from '../redux/data/action'
+import { Box, Button, Grid, InputRightAddon, flexbox, useToast } from '@chakra-ui/react'
 import { useNavigate } from 'react-router-dom'
 import { FlatTree } from 'framer-motion'
 
 function Home() {
+
+  
+  const toast = useToast()
 
   const dispatch=useDispatch()
   const navigate=useNavigate()
@@ -24,15 +27,29 @@ useEffect(()=>{
     localStorage.removeItem('token');
     navigate('signin')
   }
-  const handleClick=(item)=>{
+  const handleClick=(item,id,reserved)=>{
     if(item.reserved===false){
+      item.reserved=true
+      dispatch(patchBooking(id,reserved))
       dispatch(postBooking(item))
-      alert('Booked')
-      navigate('/booking')
+      toast({
+        title: 'Boocked.',
+        description: "We've booked the seat for you.",
+        status: 'success',
+        duration: 9000,
+        isClosable: true,
+      })
+      navigate('/details')
       
     }
     else{
-      alert('Seat is already booked')
+      toast({
+        title: 'Already.',
+        description: "Already booked seat.",
+        status: 'error',
+        duration: 9000,
+        isClosable: true,
+      })
     }
     
   }
@@ -41,6 +58,7 @@ useEffect(()=>{
     navigate('/booking')
   }
 
+  
 
   return (
 
@@ -48,27 +66,23 @@ useEffect(()=>{
       <Button left={550} onClick={handleBooking}>Booking history</Button>
       <Grid gridTemplateColumns={"repeat(3,1fr)"}>
       {mainData.map((item)=>(
-        <>
+        <Box  >
 
 <table  className='text'>
 
 <tr className='box'>
-  <td className='box' onClick={()=>handleClick(item)}>{item.seat}</td>
+  <td className='box' onClick={()=>handleClick  (item,item.id,item.reserved)}>{item.seat}</td>
 </tr>
 
 </table>
-        
-      
-        </>
+
+        </Box>
       ))}
       </Grid>
       
       <Button onClick={handleLogout}>Logout</Button>
 
       
-      
-
-
 
     </Grid>
   )

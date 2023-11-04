@@ -26,6 +26,11 @@ export const GET_PAYMENT_REQUIEST="GET_PAYMENT_REQUIEST"
 export const GET_PAYMENT_SUCCESS="GET_PAYMENT_SUCCESS"
 export const GET_PAYMENT_FAILURE="GET_PAYMENT_FAILURE"
 
+export const PATCH_BOOKING_REQUIEST="PATCH_BOOKING_REQUIEST"
+export const PATCH_BOOKING_SUCCESS="PATCH_BOOKING_SUCCESS"
+export const PATCH_BOOKING_FAILURE="PATCH_BOOKING_FAILURE"
+
+
 
 const getDataRequiest=()=>{
     return({
@@ -125,6 +130,22 @@ const getPaymentSuccess=(data)=>{
 const getPaymentFailure=()=>{
     return({
         type:GET_PAYMENT_FAILURE
+    })
+}
+const patchBookingRequiest=()=>{
+    return({
+        type:PATCH_BOOKING_REQUIEST
+    })
+}
+const patchBookingSuccess=(data)=>{
+    return({
+        type:PATCH_BOOKING_SUCCESS,
+        payload:data
+    })
+}
+const patchBookingFailure=()=>{
+    return({
+        type:PATCH_BOOKING_FAILURE
     })
 }
 
@@ -228,5 +249,21 @@ export const getPayment=()=>(dispatch)=>{
     })
     .catch((error)=>{
         dispatch(getPaymentFailure())
+    })
+}
+
+export const patchBooking=(data)=>(dispatch)=>{
+    dispatch(patchBookingRequiest())
+    return axios({
+        url:`http://localhost:8000/data/${data}`,
+        method:"PATCH",
+        data
+    })
+    .then((res)=>{
+        dispatch(patchBookingSuccess(res.data))
+        console.log("patchresdata",res.data)
+    })
+    .catch((error)=>{
+        dispatch(patchBookingFailure())
     })
 }

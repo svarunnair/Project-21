@@ -1,4 +1,4 @@
-import { DELETE_BOOKING_FAILURE, DELETE_BOOKING_REQUIEST, DELETE_BOOKING_SUCCESS, GET_BOOKING_FAILURE, GET_BOOKING_REQUIEST, GET_BOOKING_SUCCESS, GET_DATA_FAILURE, GET_DATA_REQUIEST, GET_DATA_SUCCESS, GET_PAYMENT_FAILURE, GET_PAYMENT_REQUIEST, GET_PAYMENT_SUCCESS, POST_BOOKING_FAILURE, POST_BOOKING_REQUIEST, POST_BOOKING_SUCCESS, POST_PAYMENT_FAILURE, POST_PAYMENT_REQUIEST, POST_PAYMENT_SUCCESS } from "./action"
+import { DELETE_BOOKING_FAILURE, DELETE_BOOKING_REQUIEST, DELETE_BOOKING_SUCCESS, GET_BOOKING_FAILURE, GET_BOOKING_REQUIEST, GET_BOOKING_SUCCESS, GET_DATA_FAILURE, GET_DATA_REQUIEST, GET_DATA_SUCCESS, GET_PAYMENT_FAILURE, GET_PAYMENT_REQUIEST, GET_PAYMENT_SUCCESS, PATCH_BOOKING_FAILURE, PATCH_BOOKING_REQUIEST, PATCH_BOOKING_SUCCESS, POST_BOOKING_FAILURE, POST_BOOKING_REQUIEST, POST_BOOKING_SUCCESS, POST_PAYMENT_FAILURE, POST_PAYMENT_REQUIEST, POST_PAYMENT_SUCCESS } from "./action"
 
 
 
@@ -10,7 +10,8 @@ const initState={
     getBooking:[],
     deleteBooking:[],
     postPayment:[],
-    getPayment:[]
+    getPayment:[],
+    patchBooking:[]
 }
 
 export const reducerData=(state=initState,action)=>{
@@ -131,6 +132,26 @@ export const reducerData=(state=initState,action)=>{
                     getPayment:action.payload
                 })
                 case GET_PAYMENT_FAILURE:
+                    return({
+                        ...state,
+                        isError:true,
+                        isLoading:false
+                    })
+
+                    case PATCH_BOOKING_REQUIEST:
+            return({
+                ...state,
+                isError:false,
+                isLoading:true
+            })
+            case PATCH_BOOKING_SUCCESS:
+                return({
+                    ...state,
+                    isError:false,
+                    isLoading:false,
+                    patchBooking:action.payload
+                })
+                case PATCH_BOOKING_FAILURE:
                     return({
                         ...state,
                         isError:true,

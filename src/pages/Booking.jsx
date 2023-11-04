@@ -115,7 +115,8 @@ export default function Booking() {
     navigate('/home')
   }
 
-  const handleRemove=(id)=>{
+  const handleRemove=(id,item)=>{
+    item.reserved=false
     alert('Seat  removed')
     dispatch(deleteBooking(id))
     
@@ -237,7 +238,7 @@ export default function Booking() {
 
         
 
-          <Button onClick={()=>handleRemove(item.id)}
+          <Button onClick={()=>handleRemove(item.id,item)}
             mt={10}
             w={'full'}
             bg={'green.400'}
@@ -250,7 +251,7 @@ export default function Booking() {
             _focus={{
               bg: 'green.500',
             }}>
-           Remove
+           Cancel
           </Button>
         </Box>
       

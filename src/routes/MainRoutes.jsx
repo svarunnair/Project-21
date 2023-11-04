@@ -5,6 +5,7 @@ import Booking from '../pages/Booking'
 import Signup from '../pages/Signup'
 import Signin from '../pages/Signin'
 import Payment from '../pages/Payment'
+import Details from '../pages/Details'
 
 function MainRoutes() {
   let token=localStorage.getItem('token');
@@ -20,6 +21,7 @@ function MainRoutes() {
         <Route path="/signin" element={<Signin/>}/>
         <Route path="/booking" element={token&&<Booking/>}/>
         <Route path='/payment' element={<Payment/>}/>
+        <Route path='/details' element={<Details/>}/>
 
 
 
