@@ -562,5 +562,52 @@
       "id": 50
     }
   ],
-  "booking": []
+  "booking": [
+    {
+      "seat": "14",
+      "reserved": false,
+      "catogory": "femail",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 5
+    },
+    {
+      "seat": "17",
+      "reserved": false,
+      "catogory": "femail",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 8
+    }
+  ],
+  "payment": [
+    {
+      "seat": "14",
+      "reserved": false,
+      "catogory": "femail",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 5
+    },
+    {
+      "seat": "17",
+      "reserved": false,
+      "catogory": "femail",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 8
+    }
+  ]
 }

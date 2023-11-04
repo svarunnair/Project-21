@@ -1,4 +1,4 @@
-import { DELETE_BOOKING_FAILURE, DELETE_BOOKING_REQUIEST, DELETE_BOOKING_SUCCESS, GET_BOOKING_FAILURE, GET_BOOKING_REQUIEST, GET_BOOKING_SUCCESS, GET_DATA_FAILURE, GET_DATA_REQUIEST, GET_DATA_SUCCESS, POST_BOOKING_FAILURE, POST_BOOKING_REQUIEST, POST_BOOKING_SUCCESS } from "./action"
+import { DELETE_BOOKING_FAILURE, DELETE_BOOKING_REQUIEST, DELETE_BOOKING_SUCCESS, GET_BOOKING_FAILURE, GET_BOOKING_REQUIEST, GET_BOOKING_SUCCESS, GET_DATA_FAILURE, GET_DATA_REQUIEST, GET_DATA_SUCCESS, GET_PAYMENT_FAILURE, GET_PAYMENT_REQUIEST, GET_PAYMENT_SUCCESS, POST_BOOKING_FAILURE, POST_BOOKING_REQUIEST, POST_BOOKING_SUCCESS, POST_PAYMENT_FAILURE, POST_PAYMENT_REQUIEST, POST_PAYMENT_SUCCESS } from "./action"
 
 
 
@@ -8,7 +8,9 @@ const initState={
     data:[],
     postBooking:[],
     getBooking:[],
-    deleteBooking:[]
+    deleteBooking:[],
+    postPayment:[],
+    getPayment:[]
 }
 
 export const reducerData=(state=initState,action)=>{
@@ -89,6 +91,46 @@ export const reducerData=(state=initState,action)=>{
                     deleteBooking:action.payload
                 })
                 case DELETE_BOOKING_FAILURE:
+                    return({
+                        ...state,
+                        isError:true,
+                        isLoading:false
+                    })
+
+                    case POST_PAYMENT_REQUIEST:
+            return({
+                ...state,
+                isError:false,
+                isLoading:true
+            })
+            case POST_PAYMENT_SUCCESS:
+                return({
+                    ...state,
+                    isError:false,
+                    isLoading:false,
+                    postPayment:action.payload
+                })
+                case POST_PAYMENT_FAILURE:
+                    return({
+                        ...state,
+                        isError:true,
+                        isLoading:false
+                    })
+
+                    case GET_PAYMENT_REQUIEST:
+            return({
+                ...state,
+                isError:false,
+                isLoading:true
+            })
+            case GET_PAYMENT_SUCCESS:
+                return({
+                    ...state,
+                    isError:false,
+                    isLoading:false,
+                    getPayment:action.payload
+                })
+                case GET_PAYMENT_FAILURE:
                     return({
                         ...state,
                         isError:true,

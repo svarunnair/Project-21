@@ -76,7 +76,7 @@ import { MoonIcon, SunIcon } from '@chakra-ui/icons'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
-import { deleteBooking, getBooking } from '../redux/data/action'
+import { deleteBooking, getBooking, postPayment } from '../redux/data/action'
 
 
 
@@ -118,6 +118,21 @@ export default function Booking() {
   const handleRemove=(id)=>{
     alert('Seat  removed')
     dispatch(deleteBooking(id))
+    
+  }
+
+  const total= booking.reduce((acc,item,index)=>{
+    return acc+item.price
+  },0)
+
+  const handlePayment=()=>{
+
+    booking?.map((item)=>(
+      dispatch(postPayment(item))
+
+    ))
+  
+     
     
   }
 
@@ -218,11 +233,11 @@ export default function Booking() {
         </Stack>
         Amount:{item.price}
 
-       <Stack> <Button onClick={()=>handleRemove(item.id)}>Remove</Button></Stack>
+      
 
         
 
-          <Button
+          <Button onClick={()=>handleRemove(item.id)}
             mt={10}
             w={'full'}
             bg={'green.400'}
@@ -235,7 +250,7 @@ export default function Booking() {
             _focus={{
               bg: 'green.500',
             }}>
-            Payment
+           Remove
           </Button>
         </Box>
       
@@ -244,7 +259,10 @@ export default function Booking() {
         
         </>
       ))}
+      Total amount:{total}
+      <Button onClick={handlePayment}>Payment</Button>
     </>
+
 
     
   )

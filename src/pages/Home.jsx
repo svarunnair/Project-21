@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getData, postBooking, postData } from '../redux/data/action'
-import { Button } from '@chakra-ui/react'
+import { Button, Grid, InputRightAddon, flexbox } from '@chakra-ui/react'
 import { useNavigate } from 'react-router-dom'
+import { FlatTree } from 'framer-motion'
 
 function Home() {
 
@@ -28,6 +29,7 @@ useEffect(()=>{
       dispatch(postBooking(item))
       alert('Booked')
       navigate('/booking')
+      
     }
     else{
       alert('Seat is already booked')
@@ -42,16 +44,16 @@ useEffect(()=>{
 
   return (
 
-    <div>Home
-      <Button onClick={handleBooking}>Booking history</Button>
-      <>
+    <Grid>Select you seat
+      <Button left={550} onClick={handleBooking}>Booking history</Button>
+      <Grid gridTemplateColumns={"repeat(3,1fr)"}>
       {mainData.map((item)=>(
         <>
 
 <table  className='text'>
 
 <tr className='box'>
-  <td className='box' onClick={()=>handleClick(item)}>s10</td>
+  <td className='box' onClick={()=>handleClick(item)}>{item.seat}</td>
 </tr>
 
 </table>
@@ -59,7 +61,7 @@ useEffect(()=>{
       
         </>
       ))}
-      </>
+      </Grid>
       
       <Button onClick={handleLogout}>Logout</Button>
 
@@ -68,7 +70,7 @@ useEffect(()=>{
 
 
 
-    </div>
+    </Grid>
   )
 }
 
