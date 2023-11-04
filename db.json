@@ -562,17 +562,5 @@
       "id": 50
     }
   ],
-  "booking": [
-    {
-      "seat": "12",
-      "reserved": false,
-      "catogory": "femail",
-      "price": 500,
-      "name": "NA",
-      "age": "NA",
-      "start": "Banglore",
-      "end": "Mysore",
-      "id": 3
-    }
-  ]
+  "booking": []
 }

@@ -26,6 +26,8 @@ useEffect(()=>{
   const handleClick=(item)=>{
     if(item.reserved===false){
       dispatch(postBooking(item))
+      alert('Booked')
+      navigate('/booking')
     }
     else{
       alert('Seat is already booked')

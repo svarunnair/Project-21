@@ -76,7 +76,7 @@ import { MoonIcon, SunIcon } from '@chakra-ui/icons'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
-import { getBooking } from '../redux/data/action'
+import { deleteBooking, getBooking } from '../redux/data/action'
 
 
 
@@ -112,8 +112,16 @@ export default function Booking() {
   },[])
 
   const handleHome=()=>{
-    navigate('home')
+    navigate('/home')
   }
+
+  const handleRemove=(id)=>{
+    alert('Seat  removed')
+    dispatch(deleteBooking(id))
+    
+  }
+
+  
 
   
 
@@ -122,9 +130,10 @@ export default function Booking() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   return (
     <>
+    Booking page
       <Box bg={('gray.100', 'gray.900')} px={4}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-          <Box>Logo</Box>
+          <Box onClick={handleHome}>Back</Box>
 
           <Flex alignItems={'center'}>
             <Stack direction={'row'} spacing={7}>
@@ -208,6 +217,8 @@ export default function Booking() {
           </Stack>
         </Stack>
         Amount:{item.price}
+
+       <Stack> <Button onClick={()=>handleRemove(item.id)}>Remove</Button></Stack>
 
         
 

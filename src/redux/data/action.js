@@ -14,6 +14,10 @@ export const GET_BOOKING_REQUIEST="GET_BOOKING_REQUIEST"
 export const GET_BOOKING_SUCCESS="GET_BOOKING_SUCCESS"
 export const GET_BOOKING_FAILURE="GET_BOOKING_FAILURE"
 
+export const DELETE_BOOKING_REQUIEST="DELETE_BOOKING_REQUIEST"
+export const DELETE_BOOKING_SUCCESS="DELETE_BOOKING_SUCCESS"
+export const DELETE_BOOKING_FAILURE="DELETE_BOOKING_FAILURE"
+
 
 const getDataRequiest=()=>{
     return({
@@ -66,6 +70,23 @@ const getBookingFailure=()=>{
     })
 }
 
+const deleteBookingRequiest=()=>{
+    return({
+        type:DELETE_BOOKING_REQUIEST
+    })
+}
+const deleteBookingSuccess=(data)=>{
+    return({
+        type:DELETE_BOOKING_SUCCESS,
+        payload:data
+    })
+}
+const deleteBookingFailure=()=>{
+    return({
+        type:DELETE_BOOKING_FAILURE
+    })
+}
+
 
 export const getData=()=>(dispatch)=>{
     dispatch(getDataRequiest())
@@ -113,5 +134,20 @@ export const getBooking=(data)=>(dispatch)=>{
     })
     .catch((error)=>{
         dispatch(getBookingFailure())
+    })
+}
+
+export const deleteBooking=(id)=>(dispatch)=>{
+    dispatch(deleteBookingRequiest())
+    return axios({
+        url:`http://localhost:8000/booking/${id}`,
+        method:"DELETE"
+    })
+    .then((res)=>{
+        dispatch(deleteBookingSuccess(res.data))
+        console.log("Delete.resdata",res.data)
+    })
+    .catch((error)=>{
+        dispatch(deleteBookingFailure())
     })
 }

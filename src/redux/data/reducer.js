@@ -1,4 +1,4 @@
-import { GET_BOOKING_FAILURE, GET_BOOKING_REQUIEST, GET_BOOKING_SUCCESS, GET_DATA_FAILURE, GET_DATA_REQUIEST, GET_DATA_SUCCESS, POST_BOOKING_FAILURE, POST_BOOKING_REQUIEST, POST_BOOKING_SUCCESS } from "./action"
+import { DELETE_BOOKING_FAILURE, DELETE_BOOKING_REQUIEST, DELETE_BOOKING_SUCCESS, GET_BOOKING_FAILURE, GET_BOOKING_REQUIEST, GET_BOOKING_SUCCESS, GET_DATA_FAILURE, GET_DATA_REQUIEST, GET_DATA_SUCCESS, POST_BOOKING_FAILURE, POST_BOOKING_REQUIEST, POST_BOOKING_SUCCESS } from "./action"
 
 
 
@@ -7,7 +7,8 @@ const initState={
     isLoading:false,
     data:[],
     postBooking:[],
-    getBooking:[]
+    getBooking:[],
+    deleteBooking:[]
 }
 
 export const reducerData=(state=initState,action)=>{
@@ -68,6 +69,26 @@ export const reducerData=(state=initState,action)=>{
                     getBooking:action.payload
                 })
                 case GET_BOOKING_FAILURE:
+                    return({
+                        ...state,
+                        isError:true,
+                        isLoading:false
+                    })
+
+                    case DELETE_BOOKING_REQUIEST:
+            return({
+                ...state,
+                isError:false,
+                isLoading:true
+            })
+            case DELETE_BOOKING_SUCCESS:
+                return({
+                    ...state,
+                    isError:false,
+                    isLoading:false,
+                    deleteBooking:action.payload
+                })
+                case DELETE_BOOKING_FAILURE:
                     return({
                         ...state,
                         isError:true,
