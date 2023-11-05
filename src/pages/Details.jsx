@@ -1,7 +1,7 @@
 import { Button, Input } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { patchBooking } from '../redux/data/action'
 
 function Details() {
@@ -12,7 +12,7 @@ function Details() {
     const [to,setTo]=useState('')
     const navigate=useNavigate()
     const dispatch=useDispatch()
-
+    const params = useParams()
 
     const handleName=(e)=>{
         let value=e.target.value 
@@ -41,15 +41,16 @@ function Details() {
             age:age,
             catogory:gender,
             start:from,
-            end:to
+            end:to,
+            reserved:true,
         }
-        dispatch(patchBooking(data))
+        dispatch(patchBooking(data,params.id))
         navigate('/home')
 
-        console.log("data",data)
+        console.log("data111",data)
         }
     
-
+console.log("params.id",params.id)
 
 
 
@@ -62,7 +63,7 @@ function Details() {
         <Input onChange={handleGender} placeholder='Gender'/>
         <Input onChange={handleFrom} placeholder='From'/>
         <Input onChange={handleTo} placeholder='To'/>
-        <Button onClick={handleSubmit}>Submit</Button>
+        <Button onClick={handleSubmit}>Booked</Button>
         
     </div>
   )

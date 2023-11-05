@@ -45,6 +45,7 @@
       "id": 4
     },
     {
+      "5": "",
       "seat": "14",
       "reserved": false,
       "catogory": "femail",
@@ -68,12 +69,12 @@
     },
     {
       "seat": "16",
-      "reserved": false,
-      "catogory": "femail",
+      "reserved": true,
+      "catogory": "Male",
       "price": 500,
-      "name": "NA",
-      "age": "NA",
-      "start": "Banglore",
+      "name": "Kiran",
+      "age": "27",
+      "start": "Bangalore",
       "end": "Mysore",
       "id": 7
     },
@@ -111,15 +112,14 @@
       "id": 10
     },
     {
-      "11": "",
       "seat": "20",
-      "reserved": false,
-      "catogory": "femail",
+      "reserved": true,
+      "catogory": "male",
       "price": 500,
-      "name": "NA",
-      "age": "NA",
-      "start": "Banglore",
-      "end": "Mysore",
+      "name": "Aju",
+      "age": "21",
+      "start": "kollam",
+      "end": "bangalore",
       "id": 11
     },
     {
@@ -145,7 +145,6 @@
       "id": 13
     },
     {
-      "14": "",
       "seat": "23",
       "reserved": false,
       "catogory": "femail",
@@ -216,10 +215,10 @@
       "reserved": false,
       "catogory": "male",
       "price": 500,
-      "name": "NA",
-      "age": "NA",
-      "start": "Banglore",
-      "end": "Mysore",
+      "name": "Mk",
+      "age": "21",
+      "start": "Wandoor",
+      "end": "Bangalore",
       "id": 20
     },
     {
@@ -554,13 +553,13 @@
     },
     {
       "seat": "60",
-      "reserved": false,
+      "reserved": true,
       "catogory": "male",
       "price": 500,
-      "name": "NA",
-      "age": "NA",
-      "start": "Banglore",
-      "end": "Mysore",
+      "name": "Arjun",
+      "age": "22",
+      "start": "Bangalore",
+      "end": "kerala",
       "id": 50
     }
   ],
@@ -619,6 +618,17 @@
       "start": "Banglore",
       "end": "Mysore",
       "id": 11
+    },
+    {
+      "seat": "14",
+      "reserved": true,
+      "catogory": "femail",
+      "price": 500,
+      "name": "NA",
+      "age": "NA",
+      "start": "Banglore",
+      "end": "Mysore",
+      "id": 5
     }
   ],
   "payment": []

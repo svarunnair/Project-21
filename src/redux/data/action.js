@@ -252,10 +252,10 @@ export const getPayment=()=>(dispatch)=>{
     })
 }
 
-export const patchBooking=(data)=>(dispatch)=>{
+export const patchBooking=(data,id)=>(dispatch)=>{
     dispatch(patchBookingRequiest())
     return axios({
-        url:`http://localhost:8000/data/${data}`,
+        url:`http://localhost:8000/data/${id}`,
         method:"PATCH",
         data
     })

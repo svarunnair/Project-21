@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getData, patchBooking, postBooking, postData } from '../redux/data/action'
-import { Box, Button, Grid, InputRightAddon, flexbox, useToast } from '@chakra-ui/react'
+import { Box, Button, Grid, InputRightAddon, Text, flexbox, useToast } from '@chakra-ui/react'
 import { useNavigate } from 'react-router-dom'
 import { FlatTree } from 'framer-motion'
 
@@ -30,9 +30,7 @@ useEffect(()=>{
   }
   const handleClick=(item,id,reserved)=>{
     if(item.reserved===false){
-      item.reserved=true
-      dispatch(patchBooking(id,reserved))
-      dispatch(postBooking(item))
+      
       toast({
         title: 'Boocked.',
         description: "We've booked the seat for you.",
@@ -40,7 +38,7 @@ useEffect(()=>{
         duration: 9000,
         isClosable: true,
       })
-      navigate('/details')
+      navigate(`/details/${id}`)
       
     }
     else{
@@ -63,25 +61,35 @@ useEffect(()=>{
 
   return (
 
-    <Grid>Select you seat
+    <Grid justifyContent={'center'}  >Select you seat
       <Button left={1250} width={130} onClick={handleBooking}>Booking history</Button>
-      <Grid gridTemplateColumns={"repeat(3,1fr)"}>
-      {mainData.map((item)=>(
-        <Box  >
+    
+    
 
-<table  className='text'>
 
-<tr className='box'>
-  <td className='box' onClick={()=>handleClick  (item,item.id,item.reserved)}>{item.seat}</td>
-</tr>
 
-</table>
 
-        </Box>
-      ))}
-      </Grid>
-      
-      <Button onClick={handleLogout}>Logout</Button>
+      <Grid width={'400px'}  gridTemplateColumns={"repeat(3,1fr)"}>
+     
+     <Grid gap="5px" gridTemplateColumns={"repeat(4,1fr)"} >
+             {mainData.map((item, index) => (
+               <Box
+               onClick={()=>handleClick  (item,item.id)}
+                 key={index}
+                 w="50px" 
+                 h="50px" 
+                 backgroundColor={item.reserved?"red":"green"}
+                 marginRight={index === 0 ? '100px' : 0}
+               >
+                  <Text paddingTop={'12px'}>{item.seat}</Text>
+               </Box>
+             ))}
+           </Grid>
+
+
+           </Grid>
+
+           <Button onClick={handleLogout}>Logout</Button>
 
       
 

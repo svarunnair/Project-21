@@ -71,12 +71,13 @@ import {
   Stack,
   useColorMode,
   Center,
+  Grid,
 } from '@chakra-ui/react'
 import { MoonIcon, SunIcon } from '@chakra-ui/icons'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
-import { deleteBooking, getBooking, postPayment } from '../redux/data/action'
+import { deleteBooking, getBooking, patchBooking, postPayment } from '../redux/data/action'
 
 
 
@@ -116,7 +117,15 @@ export default function Booking() {
   }
 
   const handleRemove=(id,item)=>{
-    item.reserved=false
+    let data={
+          name:"NA",
+            age:"NA",
+            catogory:"NA",
+            start:"Bangalore",
+            end:"Mysore",
+            reserved:false,
+    }
+    dispatch(patchBooking(data,id))
     alert('Seat  removed')
     dispatch(deleteBooking(id))
     
@@ -147,6 +156,7 @@ export default function Booking() {
   return (
     <>
     Booking page
+
       <Box bg={('gray.100', 'gray.900')} px={4}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <Box onClick={handleHome}>Back</Box>
@@ -193,7 +203,7 @@ export default function Booking() {
         </Flex>
       </Box>
 
-
+<Grid gridTemplateColumns={"repeat(3,1fr)"}>
       {booking.map((item)=>(
         <>
 
@@ -260,7 +270,8 @@ export default function Booking() {
         
         </>
       ))}
-      Total amount:{total}
+      </Grid>
+      Total amFount:{total}
       <Button onClick={handlePayment}>Payment</Button>
     </>
 

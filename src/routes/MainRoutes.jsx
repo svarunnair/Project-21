@@ -21,7 +21,7 @@ function MainRoutes() {
         <Route path="/signin" element={<Signin/>}/>
         <Route path="/booking" element={token&&<Booking/>}/>
         <Route path='/payment' element={<Payment/>}/>
-        <Route path='/details' element={<Details/>}/>
+        <Route path='/details/:id' element={<Details/>}/>
 
 
 
