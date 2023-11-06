@@ -2,7 +2,7 @@ import { Button, Input } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useNavigate, useParams } from 'react-router-dom'
-import { patchBooking } from '../redux/data/action'
+import { patchBooking, postBooking } from '../redux/data/action'
 
 function Details() {
     const [name,setName]=useState('')
@@ -42,9 +42,12 @@ function Details() {
             catogory:gender,
             start:from,
             end:to,
+            price:500,
             reserved:true,
         }
         dispatch(patchBooking(data,params.id))
+        dispatch(postBooking(data))
+
         navigate('/home')
 
         console.log("data111",data)

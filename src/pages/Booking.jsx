@@ -127,7 +127,9 @@ export default function Booking() {
     }
     dispatch(patchBooking(data,id))
     alert('Seat  removed')
+    
     dispatch(deleteBooking(id))
+    
     
   }
 
@@ -242,11 +244,7 @@ export default function Booking() {
             <Text color={'gray.500'}></Text>
           </Stack>
         </Stack>
-        Amount:{item.price}
-
-      
-
-        
+        Amount:Rs{item.price}/-
 
           <Button onClick={()=>handleRemove(item.id,item)}
             mt={10}
@@ -271,7 +269,7 @@ export default function Booking() {
         </>
       ))}
       </Grid>
-      Total amFount:{total}
+      Total amount:{total}
       <Button onClick={handlePayment}>Payment</Button>
     </>
 

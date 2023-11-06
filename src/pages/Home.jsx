@@ -26,7 +26,7 @@ useEffect(()=>{
   const handleLogout=()=>{
     localStorage.removeItem('token');
     
-    navigate('signin')
+    navigate('/signin')
   }
   const handleClick=(item,id,reserved)=>{
     if(item.reserved===false){
@@ -61,17 +61,17 @@ useEffect(()=>{
 
   return (
 
-    <Grid justifyContent={'center'}  >Select you seat
-      <Button left={1250} width={130} onClick={handleBooking}>Booking history</Button>
-    
     
 
-
-
+    <Grid justifyContent={'center'}  >Select your seat
+    
+    
+      <Button left={700}width={130} onClick={handleBooking}>Booking history</Button>
 
       <Grid width={'400px'}  gridTemplateColumns={"repeat(3,1fr)"}>
      
      <Grid gap="5px" gridTemplateColumns={"repeat(4,1fr)"} >
+
              {mainData.map((item, index) => (
                <Box
                onClick={()=>handleClick  (item,item.id)}
