@@ -76,8 +76,9 @@ import {
 import { MoonIcon, SunIcon } from '@chakra-ui/icons'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { useEffect } from 'react'
-import { deleteBooking, getBooking, patchBooking, postPayment } from '../redux/data/action'
+import { useEffect, useState } from 'react'
+import { deleteAll, deleteBooking, getBooking, patchBooking, postBooking, postPayment } from '../redux/data/action'
+import QRCode from 'qrcode.react'
 
 
 
@@ -105,6 +106,7 @@ export default function Booking() {
   const booking=useSelector((store)=>store.data.getBooking)
   const dispatch=useDispatch()
   const navigate=useNavigate()
+  const [qrimage,setQrimage] =useState("")
 
   console.log("booking",booking)
 
@@ -125,14 +127,19 @@ export default function Booking() {
             end:"Mysore",
             reserved:false,
     }
+    
     dispatch(patchBooking(data,id))
     alert('Seat  removed')
-    
-    dispatch(deleteBooking(id))
-    
-    
+    // dispatch(deleteBooking(id))  
   }
+  useEffect(()=>{
+    booking?.map((item)=>(
+      dispatch(deleteBooking(item.id))
+    ))
+  },[patchBooking])
+  
 
+ 
   const total= booking.reduce((acc,item,index)=>{
     return acc+item.price
   },0)
@@ -143,12 +150,32 @@ export default function Booking() {
       dispatch(postPayment(item))
 
     ))
-  
-     
-    
+
+    let qrdata=booking.map((item)=>{
+      return item.name
+    })
+
+    QRCode.toDataURL(qrdata)
+    .then((url)=>{
+      setQrimage(url)
+    })
+    .catch((error)=>{
+      console.error(error)
+    })
   }
 
+
   
+  useEffect(()=>{
+    booking.map((item)=>(
+      dispatch(deleteAll(item.id))
+    ))
+    
+  },[postPayment])
+
+  const handleClick=()=>{
+    navigate('/payment')
+  }
 
   
 
@@ -158,6 +185,8 @@ export default function Booking() {
   return (
     <>
     Booking page
+
+    <Button onClick={handleClick}>Payment history</Button>
 
       <Box bg={('gray.100', 'gray.900')} px={4}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>

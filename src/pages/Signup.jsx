@@ -49,6 +49,9 @@ export default function Signup() {
     dispatch(postSignup(data))
     navigate("/signin")
   }
+  const handleClick=()=>{
+    navigate('/signin')
+  }
 
   return (
 
@@ -118,7 +121,7 @@ export default function Signup() {
             </Stack>
             <Stack pt={6}>
               <Text align={'center'}>
-                Already a user? <Link color={'blue.400'}>Login</Link>
+                Already a user? <Link onClick={handleClick} color={'blue.400'}>Login</Link>
               </Text>
             </Stack>
           </Stack>

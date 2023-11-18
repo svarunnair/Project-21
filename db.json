@@ -2,35 +2,35 @@
   "data": [
     {
       "seat": "10",
-      "reserved": false,
-      "catogory": "NA",
+      "reserved": true,
+      "catogory": "male",
       "price": 500,
-      "name": "NA",
-      "age": "NA",
-      "start": "Bangalore",
-      "end": "Mysore",
+      "name": "varun",
+      "age": "24",
+      "start": "kollam",
+      "end": "kochi",
       "id": 1
     },
     {
       "seat": "11",
-      "reserved": false,
-      "catogory": "femail",
+      "reserved": true,
+      "catogory": "male",
       "price": 500,
-      "name": "Anu",
+      "name": "aju",
       "age": "32",
       "start": "kollam",
-      "end": "kannur",
+      "end": "tvm",
       "id": 2
     },
     {
       "seat": "12",
-      "reserved": false,
-      "catogory": "female",
+      "reserved": true,
+      "catogory": "femail",
       "price": 500,
-      "name": "Amritha",
+      "name": "ammu",
       "age": "22",
       "start": "kollam",
-      "end": "kannur",
+      "end": "tvm",
       "id": 3
     },
     {
@@ -563,5 +563,16 @@
     }
   ],
   "booking": [],
-  "payment": []
+  "payment": [
+    {
+      "name": "varun",
+      "age": "24",
+      "catogory": "male",
+      "start": "kollam",
+      "end": "kochi",
+      "price": 500,
+      "reserved": true,
+      "id": 1
+    }
+  ]
 }

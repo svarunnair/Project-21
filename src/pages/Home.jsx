@@ -66,7 +66,7 @@ useEffect(()=>{
     <Grid justifyContent={'center'}  >Select your seat
     
     
-      <Button left={700}width={130} onClick={handleBooking}>Booking history</Button>
+      <Button right={200}width={130} onClick={handleBooking}>Booking history</Button>
 
       <Grid width={'400px'}  gridTemplateColumns={"repeat(3,1fr)"}>
      
@@ -78,6 +78,7 @@ useEffect(()=>{
                  key={index}
                  w="50px" 
                  h="50px" 
+                 borderRadius={15}
                  backgroundColor={item.reserved?"red":"green"}
                  marginRight={index === 0 ? '100px' : 0}
                >

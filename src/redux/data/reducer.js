@@ -1,4 +1,4 @@
-import { DELETE_BOOKING_FAILURE, DELETE_BOOKING_REQUIEST, DELETE_BOOKING_SUCCESS, GET_BOOKING_FAILURE, GET_BOOKING_REQUIEST, GET_BOOKING_SUCCESS, GET_DATA_FAILURE, GET_DATA_REQUIEST, GET_DATA_SUCCESS, GET_PAYMENT_FAILURE, GET_PAYMENT_REQUIEST, GET_PAYMENT_SUCCESS, PATCH_BOOKING_FAILURE, PATCH_BOOKING_REQUIEST, PATCH_BOOKING_SUCCESS, POST_BOOKING_FAILURE, POST_BOOKING_REQUIEST, POST_BOOKING_SUCCESS, POST_PAYMENT_FAILURE, POST_PAYMENT_REQUIEST, POST_PAYMENT_SUCCESS } from "./action"
+import { DELETE_ALL_FAILURE, DELETE_ALL_REQUIEST, DELETE_ALL_SUCCESS, DELETE_BOOKING_FAILURE, DELETE_BOOKING_REQUIEST, DELETE_BOOKING_SUCCESS, GET_BOOKING_FAILURE, GET_BOOKING_REQUIEST, GET_BOOKING_SUCCESS, GET_DATA_FAILURE, GET_DATA_REQUIEST, GET_DATA_SUCCESS, GET_PAYMENT_FAILURE, GET_PAYMENT_REQUIEST, GET_PAYMENT_SUCCESS, PATCH_BOOKING_FAILURE, PATCH_BOOKING_REQUIEST, PATCH_BOOKING_SUCCESS, POST_BOOKING_FAILURE, POST_BOOKING_REQUIEST, POST_BOOKING_SUCCESS, POST_PAYMENT_FAILURE, POST_PAYMENT_REQUIEST, POST_PAYMENT_SUCCESS } from "./action"
 
 
 
@@ -11,7 +11,8 @@ const initState={
     deleteBooking:[],
     postPayment:[],
     getPayment:[],
-    patchBooking:[]
+    patchBooking:[],
+    deleteAll:[]
 }
 
 export const reducerData=(state=initState,action)=>{
@@ -152,6 +153,27 @@ export const reducerData=(state=initState,action)=>{
                     patchBooking:action.payload
                 })
                 case PATCH_BOOKING_FAILURE:
+                    return({
+                        ...state,
+                        isError:true,
+                        isLoading:false
+                    })
+
+
+                    case DELETE_ALL_REQUIEST:
+            return({
+                ...state,
+                isError:false,
+                isLoading:true
+            })
+            case DELETE_ALL_SUCCESS:
+                return({
+                    ...state,
+                    isError:false,
+                    isLoading:false,
+                    deleteAll:action.payload
+                })
+                case DELETE_ALL_FAILURE:
                     return({
                         ...state,
                         isError:true,

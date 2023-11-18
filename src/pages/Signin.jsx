@@ -38,6 +38,9 @@ export default function Signin() {
         }
         navigate('/home')
     }
+    const handleClick=()=>{
+      navigate('/signup')
+    }
 
 
 
@@ -79,7 +82,7 @@ export default function Signin() {
                 align={'start'}
                 justify={'space-between'}>
                 <Checkbox>Remember me</Checkbox>
-                <Text color={'blue.400'}>Forgot password?</Text>
+                <Text onClick={handleClick} color={'blue.400'}>For signup</Text>
               </Stack>
               <Button onClick={handleSubmit}
                 bg={'blue.400'}

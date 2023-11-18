@@ -30,6 +30,10 @@ export const PATCH_BOOKING_REQUIEST="PATCH_BOOKING_REQUIEST"
 export const PATCH_BOOKING_SUCCESS="PATCH_BOOKING_SUCCESS"
 export const PATCH_BOOKING_FAILURE="PATCH_BOOKING_FAILURE"
 
+export const DELETE_ALL_REQUIEST="DELETE_ALL_REQUIEST"
+export const DELETE_ALL_SUCCESS="DELETE_ALL_SUCCESS"
+export const DELETE_ALL_FAILURE="DELETE_ALL_FAILURE"
+
 
 
 const getDataRequiest=()=>{
@@ -146,6 +150,22 @@ const patchBookingSuccess=(data)=>{
 const patchBookingFailure=()=>{
     return({
         type:PATCH_BOOKING_FAILURE
+    })
+}
+const deleteAllRequiest=()=>{
+    return({    
+        type:DELETE_ALL_REQUIEST
+    })
+}
+const deleteAllSuccess=(data)=>{
+    return({
+        type:DELETE_ALL_SUCCESS,
+        payload:data
+    })
+}
+const deleteAllFailure=()=>{
+    return({
+        type:DELETE_ALL_FAILURE
     })
 }
 
@@ -265,5 +285,20 @@ export const patchBooking=(data,id)=>(dispatch)=>{
     })
     .catch((error)=>{
         dispatch(patchBookingFailure())
+    })
+}
+
+export const deleteAll=()=>(dispatch)=>{
+    dispatch(deleteAllRequiest())
+    return axios({
+        url:"http://localhost:8000/booking",
+        method:"DELETE"
+    })
+    .then((res)=>{
+        dispatch(deleteAllSuccess(res.data))
+        console.log("resdata",res.data)
+    })
+    .catch((error)=>{
+        dispatch(deleteAllFailure())
     })
 }
