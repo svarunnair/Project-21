@@ -1,4 +1,3 @@
-'use client'
 
 import React, { ReactNode } from 'react'
 import {
@@ -39,7 +38,7 @@ const LinkItems = [
   { name: 'Settings', icon: FiSettings },
 ]
 
-export default function SimpleSidebar() {
+export default function Sidebar() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   return (
     <Box minH="100vh" bg={useColorModeValue('gray.100', 'gray.900')}>
@@ -62,7 +61,7 @@ export default function SimpleSidebar() {
 
         <MainRoutes/>
 
-        v
+        
       </Box>
     </Box>
   )
