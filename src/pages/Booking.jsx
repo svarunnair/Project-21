@@ -43,35 +43,32 @@
 
 // export default Booking
 
-
-
-
-
 import {
   Box,
   Flex,
   Avatar,
-  
-  
   Menu,
   MenuButton,
   MenuList,
   MenuItem,
   MenuDivider,
   useDisclosure,
-  
-  
   Text,
-  
   List,
   ListItem,
   ListIcon,
   Button,
-  
   Stack,
   useColorMode,
   Center,
   Grid,
+
+
+  ///
+
+
+
+
 } from '@chakra-ui/react'
 import { MoonIcon, SunIcon } from '@chakra-ui/icons'
 import { useDispatch, useSelector } from 'react-redux'
@@ -84,6 +81,21 @@ import QRCode from 'qrcode.react'
 
 const NavLink = (props) => {
   const { children } = props
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
 
   return (
     <Box
@@ -184,19 +196,21 @@ export default function Booking() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   return (
     <>
-    Booking page
-
-    <Button onClick={handleClick}>Payment history</Button>
+   
 
       <Box bg={('gray.100', 'gray.900')} px={4}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <Box onClick={handleHome}>Back</Box>
+          <Text color={'yellow'}>Booking page</Text>
+
+
 
           <Flex alignItems={'center'}>
             <Stack direction={'row'} spacing={7}>
               <Button onClick={toggleColorMode}>
                 {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
               </Button>
+              <Button onClick={handleClick}>Payment history</Button>
 
               <Menu>
                 <MenuButton
@@ -294,12 +308,13 @@ export default function Booking() {
       
     </Center>
   
+  
         
         </>
       ))}
       </Grid>
-      Total amount:{total}
-      <Button onClick={handlePayment}>Payment</Button>
+      Total amount:{total}<br/>
+      <Button marginTop={10} onClick={handlePayment}>Payment</Button>
     </>
 
 
