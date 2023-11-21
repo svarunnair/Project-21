@@ -93,7 +93,7 @@ export default function Payment() {
         boxShadow={('6px 6px 0 black', '6px 6px 0 cyan')}>
          
         <Box h={'200px'} borderBottom={'1px'} borderColor="black">
-         
+         <Img src={item.qrimage}/>
         </Box>
         <Box p={4}>
           {/* <Box bg="black" display={'inline-block'} px={2} py={1} color="white" mb={2}>

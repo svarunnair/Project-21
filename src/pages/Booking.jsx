@@ -62,6 +62,7 @@ import {
   useColorMode,
   Center,
   Grid,
+  Img,
 
 
   ///
@@ -75,7 +76,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { deleteAll, deleteBooking, getBooking, patchBooking, postBooking, postPayment } from '../redux/data/action'
-import QRCode from 'qrcode.react'
+import QRCode from 'qrcode'
+import { v4 as uuidv4 } from 'uuid'
 
 
 
@@ -84,17 +86,6 @@ const NavLink = (props) => {
 
 
   
-  
-
-
-
-
-
-
-
-
-
-
 
 
   return (
@@ -119,6 +110,8 @@ export default function Booking() {
   const dispatch=useDispatch()
   const navigate=useNavigate()
   const [qrimage,setQrimage] =useState("")
+
+  let uuId= uuidv4()
 
   console.log("booking",booking)
 
@@ -156,25 +149,33 @@ export default function Booking() {
     return acc+item.price
   },0)
 
-  const handlePayment=()=>{
 
-    booking?.map((item)=>(
-      dispatch(postPayment(item))
+  useEffect(()=>{
 
-    ))
-
-    let qrdata=booking.map((item)=>{
-      return item.name
-    })
-
-    QRCode.toDataURL(qrdata)
+    QRCode.toDataURL(uuId)
     .then((url)=>{
       setQrimage(url)
+      console.log('url',url)
     })
     .catch((error)=>{
       console.error(error)
     })
+
+  },[])
+
+
+  const handlePayment=()=>{
+
+ let data={
+  name:booking.map((item)=>{return item.name}),
+  qrimage:qrimage
+ }
+     
+     console.log("datataa",data)
+      dispatch(postPayment(data))
+
   }
+
 
 
   
@@ -211,7 +212,7 @@ export default function Booking() {
                 {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
               </Button>
               <Button onClick={handleClick}>Payment history</Button>
-
+              {/* <Img src={qrimage}/> */}
               <Menu>
                 <MenuButton
                   as={Button}

@@ -44,6 +44,7 @@ function Details() {
             end:to,
             price:500,
             reserved:true,
+            seat:params.seat
         }
         dispatch(patchBooking(data,params.id))
         dispatch(postBooking(data))
@@ -53,7 +54,7 @@ function Details() {
         console.log("data111",data)
         }
     
-console.log("params.id",params.id)
+
 
 
 

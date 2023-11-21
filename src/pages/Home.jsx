@@ -1,10 +1,12 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
+import moment from 'moment';
 import { useDispatch, useSelector } from 'react-redux'
 import { getData, patchBooking, postBooking, postData } from '../redux/data/action'
 import { Box, Button, Grid, Img, InputRightAddon, Text, flexbox, useToast } from '@chakra-ui/react'
 import { useNavigate } from 'react-router-dom'
 import { FlatTree, color } from 'framer-motion'
 // 
+
 import {
  
   Flex,
@@ -42,6 +44,7 @@ import {
 } from '@chakra-ui/react'
 import { MoonIcon, SunIcon } from '@chakra-ui/icons'
 import { FaTwitter, FaYoutube, FaInstagram } from 'react-icons/fa'
+import { reload } from 'firebase/auth'
 
 
 
@@ -66,11 +69,12 @@ useEffect(()=>{
 
   
   const handleLogout=()=>{
-    localStorage.removeItem('token');
+    localStorage.clear();
     
     navigate('/welcome')
+    window.location.reload()
   }
-  const handleClick=(item,id,reserved)=>{
+  const handleClick=(item,id,seat,reserved)=>{
     if(item.reserved===false){
       
       toast({
@@ -80,7 +84,7 @@ useEffect(()=>{
         duration: 9000,
         isClosable: true,
       })
-      navigate(`/details/${id}`)
+      navigate(`/details/${id}/${seat}`)
       
     }
     else{
@@ -126,11 +130,30 @@ useEffect(()=>{
   }
   const { colorMode, toggleColorMode } = useColorMode()
   const { isOpen, onOpen, onClose } = useDisclosure()
+  const [currentTime, setCurrentTime] = useState('');
   //
 
 
- 
-  
+  // moment().format('MMMM Do YYYY, h:mm:ss a'); // November 21st 2023, 11:14:45 pm
+  // moment().format('dddd');                    // Tuesday
+  // moment().format("MMM Do YY");               // Nov 21st 23
+  // moment().format('YYYY [escaped] YYYY');     // 2023 escaped 2023
+  // moment().format();       
+
+
+
+
+
+  useEffect(() => {
+    const updateCurrentTime = () => {
+      const formattedTime = moment().format('MMMM Do YYYY, h:mm:ss a');
+      setCurrentTime(formattedTime);
+    };
+    updateCurrentTime();
+    const intervalId = setInterval(updateCurrentTime, 1000);
+    return () => clearInterval(intervalId);
+  }, []);
+
 
   return (
 
@@ -139,6 +162,9 @@ useEffect(()=>{
 <>
 
     <Box bg={('gray.100', 'gray.900')} px={4}>
+
+
+      <Text color={'white'}>Time {currentTime}</Text>
         <Flex h={36} alignItems={'center'} justifyContent={'space-between'}>
           <Box>
           </Box>
@@ -209,7 +235,7 @@ useEffect(()=>{
 
              {mainData.map((item, index) => (
                <Box marginTop={1}
-               onClick={()=>handleClick  (item,item.id)}
+               onClick={()=>handleClick  (item,item.id,item.seat)}
                cursor={'pointer'}
                 
                  key={index}

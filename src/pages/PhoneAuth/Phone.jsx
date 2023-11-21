@@ -6,12 +6,14 @@ import React, { useState } from 'react'
 import { auth } from './firebase'
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
+import { useNavigate } from 'react-router-dom'
 
 function Phone() {
 
   const [phone,setPhone]=useState('')
   const [confirmationResult,setConfirmationResult]=useState(null)
   const [otp,setOtp]=useState('')
+  const naviagate=useNavigate()
 
   const handleSend=async()=>{
 
@@ -36,14 +38,22 @@ function Phone() {
 
   const handleVerify=async()=>{
     try{
+      
       const credential=PhoneAuthProvider.credential(confirmationResult.verificationId,otp)
       await signInWithCredential(auth,credential)
       console.log("user is Signed in",credential,auth)
+      if(credential){
+        localStorage.setItem("otpToken",credential.params.verificationId)
+}
     }
     catch(err){
       console.error(err)
     }
+    
+    naviagate('/home')
   }
+
+  
   return (
     <div>
       Sign up with mobile number

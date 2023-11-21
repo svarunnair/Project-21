@@ -59,6 +59,7 @@ export const postSignup=(data)=>(dispatch)=>{
         dispatch(postSignupSuccess(res.data))
         console.log("resdtaSignup",res.data)
         localStorage.setItem('token', res.data.token);
+        window.location.reload()
     })
     .catch((error)=>{
         dispatch(postSignupFailure())

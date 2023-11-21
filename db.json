@@ -6,7 +6,7 @@
       "catogory": "male",
       "price": 500,
       "name": "varun",
-      "age": "24",
+      "age": "23",
       "start": "kollam",
       "end": "kochi",
       "id": 1
@@ -35,57 +35,57 @@
     },
     {
       "seat": "13",
-      "reserved": false,
-      "catogory": "femail",
+      "reserved": true,
+      "catogory": "male",
       "price": 500,
-      "name": "Midhu",
+      "name": "varun",
       "age": "21",
       "start": "kollam",
-      "end": "kannur",
+      "end": "kochii",
       "id": 4
     },
     {
       "seat": "14",
-      "reserved": false,
-      "catogory": "NA",
+      "reserved": true,
+      "catogory": "male",
       "price": 500,
-      "name": "NA",
-      "age": "NA",
-      "start": "Bangalore",
-      "end": "Mysore",
+      "name": "varun",
+      "age": "22",
+      "start": "kollam",
+      "end": "kochi",
       "id": 5
     },
     {
       "seat": "15",
-      "reserved": false,
-      "catogory": "female",
+      "reserved": true,
+      "catogory": "femail",
       "price": 500,
-      "name": "Anu",
-      "age": "21",
-      "start": "kollam",
-      "end": "kannur",
+      "name": "anu",
+      "age": "23",
+      "start": "kochi",
+      "end": "kollam",
       "id": 6
     },
     {
       "seat": "16",
-      "reserved": false,
-      "catogory": "Male",
+      "reserved": true,
+      "catogory": "male",
       "price": 500,
-      "name": "Kiran",
-      "age": "27",
-      "start": "Bangalore",
-      "end": "Mysore",
+      "name": "aju",
+      "age": "23",
+      "start": "kollam",
+      "end": "kochi",
       "id": 7
     },
     {
       "seat": "17",
-      "reserved": false,
-      "catogory": "NA",
+      "reserved": true,
+      "catogory": "male",
       "price": 500,
-      "name": "NA",
-      "age": "NA",
-      "start": "Bangalore",
-      "end": "Mysore",
+      "name": "aju",
+      "age": "23",
+      "start": "ktr",
+      "end": "tvm",
       "id": 8
     },
     {
@@ -101,13 +101,13 @@
     },
     {
       "seat": "19",
-      "reserved": false,
+      "reserved": true,
       "catogory": "male",
       "price": 500,
-      "name": "Amal",
+      "name": "aju",
       "age": "22",
-      "start": "bangalore",
-      "end": "goa",
+      "start": "klt",
+      "end": "kln",
       "id": 10
     },
     {
@@ -562,16 +562,26 @@
       "id": 50
     }
   ],
-  "booking": [],
-  "payment": [
+  "booking": [
     {
-      "name": "varun",
-      "age": "24",
+      "name": "aju",
+      "age": "22",
       "catogory": "male",
-      "start": "kollam",
-      "end": "kochi",
+      "start": "klt",
+      "end": "kln",
       "price": 500,
       "reserved": true,
+      "seat": "19",
+      "id": 1
+    }
+  ],
+  "payment": [
+    {
+      "name": [
+        "aju",
+        "aju"
+      ],
+      "qrimage": "data:image/png;base64,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",
       "id": 1
     }
   ]

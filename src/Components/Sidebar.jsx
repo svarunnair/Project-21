@@ -28,6 +28,7 @@ import { IconType } from 'react-icons'
 import { ReactText } from 'react'
 import MainRoutes from '../routes/MainRoutes'
 import PrivateRoutes from '../routes/PrivateRoutes'
+import { useNavigate } from 'react-router-dom'
 
 
 // interface LinkItemProps {
@@ -43,8 +44,17 @@ const LinkItems = [
 
 ]
 
+
+
 export default function Sidebar() {
   const { isOpen, onOpen, onClose } = useDisclosure()
+
+
+ 
+  
+
+
+
   return (
     
     <Box minH="100vh" bg={useColorModeValue('gray.100', 'gray.900')}>
@@ -66,7 +76,6 @@ export default function Sidebar() {
 
 
        <PrivateRoutes/>
-
         
       </Box>
     </Box>
@@ -78,6 +87,30 @@ export default function Sidebar() {
 // }
 
 const SidebarContent = ({ onClose, ...rest }) => {
+
+  const navigate=useNavigate()
+
+
+
+  const handlePath = (name)=>{
+  if(name==="Home"){
+    navigate('/home')
+  }
+  if(name==="Booking"){
+    navigate('/booking')
+  }
+  if(name==="Payment history"){
+    navigate('/payment')
+  }
+  if(name==="Home"){
+    navigate('/home')
+  }
+  if(name==="Home"){
+    navigate('/home')
+  }
+  }
+
+
   return (
     <Box
       bg={useColorModeValue('white', 'gray.900')}
@@ -94,7 +127,7 @@ const SidebarContent = ({ onClose, ...rest }) => {
         <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
       </Flex>
       {LinkItems.map((link) => (
-        <NavItem key={link.name} icon={link.icon}>
+        <NavItem onClick={()=>handlePath(link.name)} key={link.name} icon={link.icon}>
           {link.name}
         </NavItem>
       ))}
