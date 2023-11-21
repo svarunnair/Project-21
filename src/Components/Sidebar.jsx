@@ -14,6 +14,7 @@ import {
   BoxProps,
   FlexProps,
   Img,
+  Button,
 } from '@chakra-ui/react'
 import {
   FiHome,
@@ -35,15 +36,17 @@ import PrivateRoutes from '../routes/PrivateRoutes'
 // }
 const LinkItems = [
   { name: 'Home', icon: FiHome },
-  { name: 'Trending', icon: FiTrendingUp },
-  { name: 'Explore', icon: FiCompass },
+  { name: 'Bookings', icon: FiTrendingUp },
+  { name: 'Payment history', icon: FiCompass },
   { name: 'Favourites', icon: FiStar },
   { name: 'Settings', icon: FiSettings },
+
 ]
 
 export default function Sidebar() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   return (
+    
     <Box minH="100vh" bg={useColorModeValue('gray.100', 'gray.900')}>
       <SidebarContent onClose={() => onClose} display={{ base: 'none', md: 'block' }} />
       <Drawer

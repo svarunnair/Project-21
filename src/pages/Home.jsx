@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getData, patchBooking, postBooking, postData } from '../redux/data/action'
 import { Box, Button, Grid, Img, InputRightAddon, Text, flexbox, useToast } from '@chakra-ui/react'
 import { useNavigate } from 'react-router-dom'
-import { FlatTree } from 'framer-motion'
+import { FlatTree, color } from 'framer-motion'
 // 
 import {
  
@@ -68,7 +68,7 @@ useEffect(()=>{
   const handleLogout=()=>{
     localStorage.removeItem('token');
     
-    navigate('/signin')
+    navigate('/welcome')
   }
   const handleClick=(item,id,reserved)=>{
     if(item.reserved===false){
@@ -142,9 +142,9 @@ useEffect(()=>{
         <Flex h={36} alignItems={'center'} justifyContent={'space-between'}>
           <Box>
           </Box>
+         <br/> <Img marginRight={100} width={400} src='https://www.bigredbus.com.au/wp-content/uploads/2021/05/Big-red-bus-websites-logo-1.png'/>
        
-          <Text textDecorationStyle={'solid'} color={'yellow.300'}>Select your seat
-    </Text>
+          
 
           <Flex alignItems={'center'}>
             <Stack direction={'row'} spacing={7}>
@@ -152,6 +152,7 @@ useEffect(()=>{
                 {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
               </Button>
               {/* <Button width={120} >Booking history</Button> */}
+              
 
               <Menu>
                 <MenuButton
@@ -172,12 +173,14 @@ useEffect(()=>{
                       size={'2xl'}
                       src={'https://avatars.dicebear.com/api/male/username.svg'}
                     />
+                    
                   </Center>
                   <br />
                   <Center>
                     <p>Username</p>
                   </Center>
                   <br />
+                  
                   <MenuDivider />
                   <MenuItem onClick={handlePayment}>Payment page</MenuItem>
                   <MenuItem onClick={handleBooking}>Booking page</MenuItem>
@@ -199,7 +202,7 @@ useEffect(()=>{
      
     
       
-
+<Text color={'yellow.400'} fontWeight={3} fontSize={10} fontFamily={'serif'}>Book your journey now with the world's largest bus platform</Text>
       <Grid marginTop={10} width={'400px'}  gridTemplateColumns={"repeat(3,1fr)"}>
      
      <Grid gap="5px" gridTemplateColumns={"repeat(4,1fr)"} >
@@ -207,6 +210,8 @@ useEffect(()=>{
              {mainData.map((item, index) => (
                <Box marginTop={1}
                onClick={()=>handleClick  (item,item.id)}
+               cursor={'pointer'}
+                
                  key={index}
                  w="50px" 
                  h="50px" 

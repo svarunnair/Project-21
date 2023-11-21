@@ -4,6 +4,7 @@ import MainRoutes from './routes/MainRoutes';
 import Sidebar from './Components/Sidebar';
 import PublicRoutes from './routes/PublicRoutes';
 import PrivateRoutes from './routes/PrivateRoutes';
+import WelcomePage from './pages/WelcomePage';
 
 function App() {
 
@@ -11,9 +12,10 @@ function App() {
   return (
     <div className="App">
       
-      {/* {token&&<PrivateRoutes/>} */}
+     
       <PublicRoutes/>
       {token&&<Sidebar/>}
+      
       
     </div>
   );
