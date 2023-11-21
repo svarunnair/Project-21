@@ -139,9 +139,10 @@ useEffect(()=>{
 <>
 
     <Box bg={('gray.100', 'gray.900')} px={4}>
-        <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
+        <Flex h={36} alignItems={'center'} justifyContent={'space-between'}>
           <Box>
           </Box>
+       
           <Text textDecorationStyle={'solid'} color={'yellow.300'}>Select your seat
     </Text>
 

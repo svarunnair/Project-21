@@ -13,6 +13,7 @@ import {
   useDisclosure,
   BoxProps,
   FlexProps,
+  Img,
 } from '@chakra-ui/react'
 import {
   FiHome,
@@ -25,6 +26,8 @@ import {
 import { IconType } from 'react-icons'
 import { ReactText } from 'react'
 import MainRoutes from '../routes/MainRoutes'
+import PrivateRoutes from '../routes/PrivateRoutes'
+
 
 // interface LinkItemProps {
 //   name: string
@@ -59,7 +62,7 @@ export default function Sidebar() {
       <Box ml={{ base: 0, md: 60 }} p="4">
 
 
-        <MainRoutes/>
+       <PrivateRoutes/>
 
         
       </Box>
@@ -83,7 +86,7 @@ const SidebarContent = ({ onClose, ...rest }) => {
       {...rest}>
       <Flex h="20" alignItems="center" mx="8" justifyContent="space-between">
         <Text fontSize="2xl" fontFamily="monospace" fontWeight="bold">
-          Logo
+          <Img borderRadius={50} width={70} src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2yhZuwWOTUxpt0bX2KCd99v9apXA1lyc0qw&usqp=CAU'/>
         </Text>
         <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
       </Flex>
