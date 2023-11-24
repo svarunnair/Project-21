@@ -147,12 +147,22 @@ useEffect(()=>{
   useEffect(() => {
     const updateCurrentTime = () => {
       const formattedTime = moment().format('MMMM Do YYYY, h:mm:ss a');
+      console.log("formated",formattedTime)
+      // if("November 22nd 2023, 9:19:32 pm"===formattedTime){
+      //   localStorage.clear()
+      //   navigate("/welcome")
+      // }
       setCurrentTime(formattedTime);
     };
+
+   
     updateCurrentTime();
     const intervalId = setInterval(updateCurrentTime, 1000);
-    return () => clearInterval(intervalId);
+    return            () =>       clearInterval(intervalId);
   }, []);
+
+
+  
 
 
   return (
